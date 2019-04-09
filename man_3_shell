@@ -1,0 +1,9 @@
+.TH <shell name> 1
+.SH NAME
+<shell name> \-- <discription of shell>
+.SH SYNOPSIS
+.B <shell name>
+.IR format
+[\fiarguments\fR \fI...\fR]
+.SH DESCRIPTION
+<longer discription of shell>
