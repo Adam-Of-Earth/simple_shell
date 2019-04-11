@@ -1,12 +1,12 @@
 # Project 0x15 - Simple Shell
 
-One Paragraph of project description goes here
+Welcome to the repository for the **HAASH**, or **H**olberton, **A**dam, & **A**lex **Sh**ell.
+This is the final project for the first trimester of the Holberton New Haven curriculum, working in C to assemble our own simple shell, replicating the methodologies by which the original **sh** shell operates, but without the memory leaks.
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-Pull the latest version of the MASTER branch, and compile all C files in the root directory using something along the lines of ```$ gcc -Wall -Wextra -Werror -pedantic *.c *.h```
-
+Pull the latest version of the MASTER branch, and compile all ***.c*** and ***.h*** files to assemble the HAASH!
 ### Prerequisites
 
 ```
@@ -17,21 +17,26 @@ Basic understanding of C/UNIX-based shells.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development env running and compile all C files in the root directory using something along the lines of $ gcc -Wall -Wextra -Werror -pedantic *.c *.h
 
-Say what the step will be
-
+1. Pull "master" branch from currernt repository.
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+git pull master https://github.com/ajdebiase/simple_shell
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+2. Compile all C and header files in the root directory.
+```
+$ gcc -o -Wall -Wextra -Werror -pedantic haash *.c *.h
+```
+3. Run the output file locally to enter into our custom simple shell.
+```
+$ ./haash
+```
+
+4. Enjoy using the HAASH!
+```
+$ echo "hello, world!"
+```
 
 ## Running the tests
 
@@ -78,6 +83,6 @@ Holberton New Haven: Low-Level Programming Track
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Mark Hedgeland
+* Shout out to the creators of the Betty linter
+* Betty Holberton
