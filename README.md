@@ -5,13 +5,14 @@ One Paragraph of project description goes here
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Pull the latest version of the MASTER branch, and compile all C files in the root directory using something along the lines of ```$ gcc -Wall -Wextra -Werror -pedantic *.c *.h```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
 ```
-Give examples
+Ubuntu LTS v14.04
+GCC installed on terminal.
+Basic understanding of C/UNIX-based shells.
 ```
 
 ### Installing
