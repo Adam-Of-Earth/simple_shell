@@ -58,13 +58,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Vim](https://www.vim.org/) - The Obvious Choice in text editors.
+* [Vagrant](https://www.vagrantup.com/) - Dev environment management.
+* [VirtualBox](https://www.virtualbox.org/) - VM management.
 
 ## Authors
 
