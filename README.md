@@ -17,8 +17,6 @@ Basic understanding of C/UNIX-based shells.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running and compile all C files in the root directory using something along the lines of $ gcc -Wall -Wextra -Werror -pedantic *.c *.h
-
 1. Pull "master" branch from currernt repository.
 ```
 git pull master https://github.com/ajdebiase/simple_shell
