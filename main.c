@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+ char **vector(char *str, ssize_t n);
 /**
   * main - Function to act as a simple shell
   * @argc: Count of arguments passed to main
@@ -29,7 +29,7 @@ int main(int argc, char *argv[], char *envp[])
 			perror(argv[0]);
 		if (newProcess == 0) // Child Process
 		{
-			// STRTOK
+			vector(buffer, charCount);
 			execve(buffer, argv, envp);
 			perror(argv[0]);
 		}
