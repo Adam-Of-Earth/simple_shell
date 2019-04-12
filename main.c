@@ -1,5 +1,4 @@
 #include "holberton.h"
- char **vector(char *str, ssize_t n);
 /**
   * main - Function to act as a simple shell
   * @argc: Count of arguments passed to main
@@ -10,6 +9,7 @@
 
 int main(int argc, char *argv[], char *envp[])
 {
+	char **argsVector = 0;
 	char *buffer;
 	size_t buffSize = 0;
 	ssize_t charCount;
@@ -21,15 +21,18 @@ int main(int argc, char *argv[], char *envp[])
 	while (1)
 	{
 		write(STDERR_FILENO, "$ ", 2);
-		charCount = getline(&buffer, &buffSize, stdin);
+		charCount = getline(&buffer, &buffSize, stdin); // check
 		if (charCount < 0) // Parent process
 			break;
+		if ((buffer[charCount - 1]) == '\n')
+			buffer[charCount - 1] = '\0';
+		argsVector = malloc(sizeof(argsVector) + 1);
+		*argsVector = *vector(buffer, charCount);
 		newProcess = fork();
 		if (newProcess < 0)
 			perror(argv[0]);
 		if (newProcess == 0) // Child Process
 		{
-			vector(buffer, charCount);
 			execve(buffer, argv, envp);
 			perror(argv[0]);
 		}
@@ -39,5 +42,6 @@ int main(int argc, char *argv[], char *envp[])
 	if (charCount < 0)
 		write(STDERR_FILENO, "\n", 1);
 	free(buffer);
+	free(argsVector);
 	return (0);
 }

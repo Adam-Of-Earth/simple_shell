@@ -10,7 +10,7 @@
 char **vector(char *str, ssize_t charCount)
 {
 	char **args;
-	char *buffer, *token, *buffPtr, *delim = "\t ";
+	char *buffer, *token, *buffPtr, *delim = " :";
 	int index = 0, tok = 1;
 
 	buffer = malloc(charCount + 1);
@@ -24,10 +24,10 @@ char **vector(char *str, ssize_t charCount)
 			tok++;
 		buffPtr++;
 	}
-	args = malloc(sizeof(char *) * (tok + 1));
+	args = malloc(sizeof(char *) * (tok + 1)); // check line
 	if (args == NULL)
 		return (NULL);
-	token = strtok(buffer, delim); //For STRTOK.
+	token = strtok(buffer, delim); //For STRTOK.check line
 	while (token)
 	{
 		args[index] = malloc(strlen(token) + 1); //STRLEN func

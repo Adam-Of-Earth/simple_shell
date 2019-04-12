@@ -7,5 +7,5 @@
 #include <sys/wait.h>
 #include <string.h>
 #include <sys/types.h>
-char **vector(char *str, ssize_t n);
+char **vector(char *str, ssize_t charCount);
 #endif  
