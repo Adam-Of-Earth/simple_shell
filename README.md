@@ -24,8 +24,9 @@ git pull master https://github.com/ajdebiase/simple_shell
 
 2. Compile all C and header files in the root directory.
 ```
-$ gcc-Wall -Wextra -Werror -pedantic *.c *.h -o haash
+$ gcc -Wall -Wextra -Werror -pedantic -o haash
 ```
+
 3. Run the output file locally to enter into our custom simple shell.
 ```
 $ ./haash
