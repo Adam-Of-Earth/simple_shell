@@ -1,7 +1,7 @@
 # Project 0x15 - Simple Shell
 
 Welcome to the repository for the **HAASH**, or **H**olberton, **A**dam, & **A**lex **Sh**ell.
-This is the final project for the first trimester of the Holberton New Haven curriculum, working in C to assemble our own simple shell, replicating the methodologies by which the original **sh** shell operates, but without the memory leaks.
+This is the final project for the first trimester of the Holberton New Haven curriculum, working in C to assemble our own simple shell, replicating the methodologies by which the original **sh** shell operates, but without the memory leaks that may come in tow.
 
 
 ## Getting Started
@@ -57,9 +57,6 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
