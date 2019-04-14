@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _arrayfree - cleans an array of pointers
+ * free_array - cleans an array of pointers
  * @array: array of pointers to free
  *
  * Return: void
