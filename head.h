@@ -2,5 +2,7 @@
 #define _HEAD_H_
 #include <stdio.h>
 #include <string.h>
-int _strlen(char *str)
+#include <stdlib.h>
+int _strlen(char *str);
+int _strcmp(char *s1, char *s2, int n);
 #endif
