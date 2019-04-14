@@ -7,5 +7,6 @@
 #include <sys/wait.h>
 #include <string.h>
 #include <sys/types.h>
+extern char **environ;
 char **vector(char *str, ssize_t charCount);
 #endif  

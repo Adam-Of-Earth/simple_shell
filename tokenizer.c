@@ -10,7 +10,7 @@
 char **vector(char *str, ssize_t charCount)
 {
 	char **args;
-	char *buffer, *token, *buffPtr, *delim = " :";
+	char *buffer = "", *token = "", *buffPtr = "", *delim = " :/;";
 	int index = 0, tok = 1;
 
 	buffer = malloc(charCount + 1);
@@ -39,5 +39,6 @@ char **vector(char *str, ssize_t charCount)
 	}
 	args[index] = NULL;
 	free(buffer);
+	free(args);
 	return (args);
 }
