@@ -8,4 +8,5 @@
 #include <string.h>
 #include <sys/types.h>
 char **vector(char *str, ssize_t charCount);
-#endif  
+void free_array(char **array);
+#endif

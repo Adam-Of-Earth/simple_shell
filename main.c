@@ -42,6 +42,6 @@ int main(int argc, char *argv[], char *envp[])
 	if (charCount < 0)
 		write(STDERR_FILENO, "\n", 1);
 	free(buffer);
-	free(argsVector);
+	free_array(argsVector);
 	return (0);
 }
