@@ -10,9 +10,9 @@ char **pathHolder(extern char **env)
 	{
 		*pathBuffer[index] = env[index];
 		*pathHolder[index] = *pathBuffer[index];
-		index++;	
+		index++;
 	}
-	free (*pathBuffer);
+	free(*pathBuffer);
 	return (pathHolder);
 }
 
