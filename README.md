@@ -1,7 +1,7 @@
 # Project 0x15 - Simple Shell
 
 Welcome to the repository for the **HAASH**, or **H**olberton, **A**dam, & **A**lex **Sh**ell.
-This is the final project for the first trimester of the Holberton New Haven curriculum, working in C to assemble our own simple shell, replicating the methodologies by which the original **sh** shell operates, but without the memory leaks.
+This is the final project for the first trimester of the Holberton New Haven curriculum, working in C to assemble our own simple shell, replicating the methodologies by which the original **sh** shell operates, but without the memory leaks that may come in tow.
 
 
 ## Getting Started
@@ -24,8 +24,9 @@ git pull master https://github.com/ajdebiase/simple_shell
 
 2. Compile all C and header files in the root directory.
 ```
-$ gcc -Wall -Wextra -Werror -pedantic *.c *.h -o haash
+$ gcc -Wall -Wextra -Werror -pedantic -o haash
 ```
+
 3. Run the output file locally to enter into our custom simple shell.
 ```
 $ ./haash
@@ -56,16 +57,13 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
 * [Vim](https://www.vim.org/) - The Obvious Choice in text editors.
 * [Vagrant](https://www.vagrantup.com/) - Dev environment management.
 * [VirtualBox](https://www.virtualbox.org/) - VM management.
-* [Emacs](https://www.gnu.org/software/emacs/z) - Just for you, Rory. And Adam.
+* [Emacs](https://www.gnu.org/software/emacs/) - Just for you, Rory. And Adam.
 
 ## Authors
 
