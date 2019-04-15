@@ -10,6 +10,7 @@ Pull the latest version of the MASTER branch, and compile all ***.c*** and ***.h
 
 ### Additional Files
 
+* tokenizer: a function that turns a string into a vector array
 * \_strlen: a function to find length
 * \_strncmp: a function that compares one string to another
 * free_array: a function designed to free pointer arrays
