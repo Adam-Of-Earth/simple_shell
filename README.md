@@ -7,6 +7,13 @@ This is the final project for the first trimester of the Holberton New Haven cur
 ## Getting Started
 
 Pull the latest version of the MASTER branch, and compile all ***.c*** and ***.h*** files to assemble the HAASH!
+
+### Additional Files
+
+* \_strlen: a function to find length
+* \_strncmp: a function that compares one string to another
+* free_array: a function designed to free pointer arrays
+
 ### Prerequisites
 
 ```
