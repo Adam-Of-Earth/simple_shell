@@ -10,13 +10,13 @@
 char **vector(char *str, ssize_t charCount)
 {
 	char **args;
-	char *buffer, *token, *buffPtr, *delim = " :";
+	char *buffer, *token, *buffPtr, *full_path, *delim = " :";
 	int index = 0, tok = 1;
 
 	buffer = malloc(charCount + 1);
 	if (buffer == NULL)
 		return (NULL);
-	strncpy(buffer, str, charCount + 1); //For STRNCPY function.
+	_strncpy(buffer, str, charCount + 1); //For STRNCPY function.
 	buffPtr = buffer;
 	while (*buffPtr)
 	{
@@ -30,10 +30,10 @@ char **vector(char *str, ssize_t charCount)
 	token = strtok(buffer, delim); //For STRTOK.check line
 	while (token)
 	{
-		args[index] = malloc(strlen(token) + 1); //STRLEN func
+		args[index] = malloc(_strlen(token) + 1);
 		if (args[index] == NULL)
 			return (NULL);
-		strncpy(args[index], token, strlen((token) + 1));//STRLEN/STRNCPY
+		full_path = _strncpy(args[index], token, _strlen((token) + 1));
 		token = strtok(NULL, delim); //STRTOK
 		index++;
 	}
