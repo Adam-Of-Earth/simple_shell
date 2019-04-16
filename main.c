@@ -11,6 +11,7 @@ int main(int argc, char *argv[], char *envp[])
 {
 	char **argsVector = 0;
 	char *buffer;
+	char interactive = 0;
 	size_t buffSize = 0;
 	ssize_t charCount;
 	pid_t newProcess;
@@ -18,28 +19,29 @@ int main(int argc, char *argv[], char *envp[])
 
 	if (argc < 1)
 		return (-1);
+	signal(SIGINT, control);
+	if (isatty(STDIN_FILENO) && isatty(STDOUT_FILENO))
+		interactive = 1;
 	while (1)
 	{
-		write(STDERR_FILENO, "$ ", 2);
+		if (interactive)
+			write(STDERR_FILENO, "[$] ", 4);
 		charCount = getline(&buffer, &buffSize, stdin); // check
-		if (charCount < 0) // Parent process
+		if (charCount < 0)
 			break;
-		if ((buffer[charCount - 1]) == '\n')
-			buffer[charCount - 1] = '\0';
-		argsVector = malloc(sizeof(argsVector) + 1);
-		*argsVector = *vector(buffer, charCount);
+		argsVector = vector(buffer, charCount);//error
 		newProcess = fork();
-		if (newProcess < 0)
-			perror(argv[0]);
-		if (newProcess == 0) // Child Process
+		if (newProcess > 0)// Parint process
+			wait(&status);
+		else if (newProcess == 0) // Child Process
 		{
-			execve(buffer, argv, envp);
+			execve(argsVector[0], argsVector, envp);
 			perror(argv[0]);
 		}
 		else
-			wait(&status);
+			perror(argv[0]);
 	}
-	if (charCount < 0)
+	if (charCount < 0 && interactive)
 		write(STDERR_FILENO, "\n", 1);
 	free(buffer);
 	free_array(argsVector);
