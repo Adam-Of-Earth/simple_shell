@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * tester - combind path and command to see if its valid
+ * appender - combind path and command to see if its valid
  * @str: user imput
- *
- *
- *
+ * @tokens: path array
+ * @args: argument array
+ * Return: void
  */
 void appender(char *str, char **tokens, char **args)
 {
@@ -15,7 +15,7 @@ void appender(char *str, char **tokens, char **args)
 	while (tokens[index] != NULL)
 	{
 		fullcommand = combind(tokens[index], str);
-		if(access(fullcommand, F_OK) == 0)
+		if (access(fullcommand, F_OK) == 0)
 		{
 			execve(fullcommand, args, ce);
 			error_code = errno;

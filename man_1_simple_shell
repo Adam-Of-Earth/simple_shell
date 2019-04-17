@@ -1,0 +1,9 @@
+.TH HAASH 1 "April 2019" Linux "User Manuals"
+.SH NAME
+HAASH \-- command interpreter (simple shell)
+.SH SYNOPSIS
+.B HAASH
+.IR command
+.IR name [\fiargrments\fR \fI...\fR]
+.SH DESCRIPTION
+.B HAASH or (H)olberton (A)dam and (A)lex (SH)ell is a simple command line interpreter
