@@ -5,8 +5,8 @@
  * @n: comand
  * Return: void
  */
-void control(int n )
+void control(int n)
 {
-	if(n)
+	if (n)
 	write(2, "\n[$] ", 5);
 }

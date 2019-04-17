@@ -4,13 +4,14 @@
  * vector - Tokenizes input string "str" and returns tokens in an array.
  * @str: String being tokenized and packaged.
  * @charCount: Length of string.
+ * @delim: string of seperating chars
  * Return: Vector array with tokenized string.
  */
 
-char **vector(char *str, ssize_t charCount)
+char **vector(char *str, ssize_t charCount, char *delim)
 {
 	char **args;
-	char *buffer, *token, *buffPtr, *delim = "\t= :\n";
+	char *buffer, *token, *buffPtr;
 	int index = 0, tok = 1;
 
 	buffer = malloc(charCount + 1);
@@ -27,12 +28,14 @@ char **vector(char *str, ssize_t charCount)
 			    buffPtr[1] != '\n' &&
 			    buffPtr[1] != '\0'
 		))
-       			tok++;
+			tok++;
+		if (buffPtr[0] == ':' && buffPtr[1] == '/')
+			tok++;
 	}
-	args = malloc(sizeof(char *) * (tok + 1)); // check line
+	args = malloc(sizeof(char *) * (tok + 1));
 	if (args == NULL)
 		return (NULL);
-	token = strtok(buffer, delim); //For STRTOK.check line
+	token = strtok(buffer, delim); //For STRTOK
 	for (index = 0; token != NULL; index++)
 	{
 		args[index] = malloc(_strlen(token) + 1);
