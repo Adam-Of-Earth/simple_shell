@@ -7,13 +7,13 @@ char *combind(char *str1, char *str2)
 
 	while(*strmover != '\0')
 		strmover++;
-	if (*strmover-- != '/')
-		*strmover++ = '/';
 	full = malloc(sizeof(char) * (a + b + 2));
 	for (;str1[index] != '\0'; index++)
 		full[index] = str1[index];
-	index2 = index + 1;
-	for (index = 0; str2[index] != '\0'; index++)
+	if (full[index - 1] != '/')
+		full[index++] = '/';
+	index2 = index;
+	for (index = 0; str2[index] != '\0'; index++, index2++)
 	{
 		full[index2] = str2[index];
 	}

@@ -14,7 +14,7 @@ char *pathfinder(char **env)
 	for (index = 0; env[index]; index++)
 	{
 		if (_strncmp(env[index], path, 5) == 1)
-			return ((env[index]) += 5);
+			return (env[index] + 5);
 	}
 	return (NULL);
 }

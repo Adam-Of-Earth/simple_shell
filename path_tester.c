@@ -7,7 +7,7 @@
  *
  *
  */
-int appender(char *str, char **tokens)
+void appender(char *str, char **tokens, char **args)
 {
 	int error_code, index = 0;
 	char *fullcommand, **ce = environ;
@@ -15,11 +15,14 @@ int appender(char *str, char **tokens)
 	while (tokens[index] != NULL)
 	{
 		fullcommand = combind(tokens[index], str);
-		if(access(fullcommand, F_OK))
+		if(access(fullcommand, F_OK) == 0)
 		{
-			execve(fullcommand, tokens, ce);
+			execve(fullcommand, args, ce);
 			error_code = errno;
 		}
+		index++;
 	}
 	errno = error_code;
+	perror(str);
+	exit(2);
 }

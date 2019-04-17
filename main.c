@@ -29,7 +29,10 @@ int main(int argc, char *argv[], char *envp[])
 		charCount = getline(&buffer, &buffSize, stdin);
 		if (charCount < 0)
 			break;
-		path = pathfinder(envp);
+		if (buffer[0] != '/')
+		{
+			path = pathfinder(envp);
+		}
 		envVector = vector(path, _strlen(path), pathDelim);
 		argsVector = vector(buffer, charCount, delim);
 		newProcess = fork();
@@ -37,8 +40,7 @@ int main(int argc, char *argv[], char *envp[])
 			wait(&status);
 		else if (newProcess == 0) /* Child Process*/
 		{
-			execve(argsVector[0], argsVector, envp);
-			perror(argv[0]);
+			appender(argsVector[0], envVector, argsVector);
 		}
 		else
 			perror(argv[0]);
