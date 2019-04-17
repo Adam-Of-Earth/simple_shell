@@ -10,6 +10,8 @@ void free_array(char **array)
 {
 	int index = 0;
 
+	if (array == NULL)
+		return;
 	while (array[index] != NULL)
 	{
 		free(array[index]);

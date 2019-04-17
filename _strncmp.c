@@ -15,7 +15,7 @@ int _strncmp(char *s1, char *s2, int n)
 
 	s1p = s1;
 	s2p = s2;
-	while (*s1p != '\0' && index < n)
+	while (*s1p != '\0' && index < n && *s1p == *s2p)
 	{
 		if (*s1p == *s2p)
 		{

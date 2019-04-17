@@ -23,7 +23,6 @@ char *combind(char *str1, char *str2)
 	{
 		full[index2] = str2[index];
 	}
-	index2++;
 	full[index2] = '\0';
 	return (full);
 }

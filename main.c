@@ -10,7 +10,7 @@
 int main(int argc, char *argv[], char *envp[])
 {
 	char **argsVector = 0, **envVector = 0;
-	char *buffer, *path, *delim = " \t\n", *pathDelim = ":";
+	char *buffer = NULL, *path, *delim = " \t\n", *pathDelim = ":";
 	char interactive = 0;
 	size_t buffSize = 0;
 	ssize_t charCount;
