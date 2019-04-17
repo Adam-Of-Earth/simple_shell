@@ -11,7 +11,7 @@
 #include <errno.h>
 extern char **environ;
 char *combind(char *str1, char *str2);
-int appender(char *str, char **tokens);
+void appender(char *str, char **tokens, char **args);
 char **vector(char *str, ssize_t charCount, char *delim);
 void free_array(char **array);
 int _strlen(char *str);
