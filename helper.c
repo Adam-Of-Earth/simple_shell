@@ -21,6 +21,8 @@ char *combind(char *str1, char *str2)
 	index2 = index;
 	for (index = 0; str2[index] != '\0'; index++, index2++)
 	{
+		if (str2[index] == '/')
+			return (str2);
 		full[index2] = str2[index];
 	}
 	full[index2] = '\0';

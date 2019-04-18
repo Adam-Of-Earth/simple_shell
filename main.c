@@ -29,8 +29,7 @@ int main(int argc, char *argv[], char *envp[])
 		charCount = getline(&buffer, &buffSize, stdin);
 		if (charCount < 0)
 			break;
-		if (buffer[0] != '/')
-			path = pathfinder(envp);
+		path = pathfinder(envp);
 		envVector = vector(path, _strlen(path), pathDelim);
 		argsVector = vector(buffer, charCount, delim);
 		newProcess = fork();
