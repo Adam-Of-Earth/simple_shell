@@ -30,24 +30,23 @@ int main(int argc, char *argv[], char *envp[])
 		if (charCount < 0)
 			break;
 		if (buffer[0] != '/')
-		{
 			path = pathfinder(envp);
-		}
 		envVector = vector(path, _strlen(path), pathDelim);
 		argsVector = vector(buffer, charCount, delim);
 		newProcess = fork();
 		if (newProcess > 0)/* Parint process*/
-			wait(&status);
-		else if (newProcess == 0) /* Child Process*/
 		{
-			appender(argsVector[0], envVector, argsVector);
+			wait(&status);
+			free_array(envVector);
+			free_array(argsVector);
 		}
+		else if (newProcess == 0) /* Child Process*/
+			appender(argsVector[0], envVector, argsVector);
 		else
 			perror(argv[0]);
 	}
 	if (charCount < 0 && interactive)
 		write(STDERR_FILENO, "\n", 1);
 	free(buffer);
-	free_array(argsVector);
 	return (0);
 }
