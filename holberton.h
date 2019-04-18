@@ -18,4 +18,5 @@ int _strlen(char *str);
 int _strncmp(char *s1, char *s2, int n);
 void control(int n);
 char *pathfinder(char **env);
+char *_strncpy(char *dest, char *src, int n);
 #endif

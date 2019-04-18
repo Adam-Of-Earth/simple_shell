@@ -17,7 +17,7 @@ char **vector(char *str, ssize_t charCount, char *delim)
 	buffer = malloc(charCount + 1);
 	if (buffer == NULL)
 		return (NULL);
-	strncpy(buffer, str, charCount + 1);
+	_strncpy(buffer, str, charCount + 1);
 	buffPtr = buffer;
 	while (*buffPtr == ' ')
 		buffPtr++;
@@ -41,7 +41,7 @@ char **vector(char *str, ssize_t charCount, char *delim)
 		args[index] = malloc(_strlen(token) + 1);
 		if (args[index] == NULL)
 			return (NULL);
-		strncpy(args[index], token, _strlen(token) + 1);
+		_strncpy(args[index], token, _strlen(token) + 1);
 		token = strtok(NULL, delim);
 	}
 	args[index] = NULL;
